@@ -1,10 +1,15 @@
 import React from "react";
+import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
 
 const App = () => {
     return (
-        <h1>Hello App</h1>
-        //Header
-        //Sidebar
+        <>
+        <Header/>
+        <div className="app__body">
+        <Sidebar/>
+        </div>
+        </>
         //Chat window - Router
     )
 }
