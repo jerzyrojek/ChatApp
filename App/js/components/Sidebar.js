@@ -3,9 +3,11 @@ import {Typography} from "@material-ui/core";
 import SidebarItem from "./SidebarItem";
 import AddIcon from '@material-ui/icons/Add';
 import {database} from "../../firebase";
+import {useStateValue} from "../StateProvider";
 
 
 const Sidebar = () => {
+    const [{user}] = useStateValue();
     const [channels, setChannels] = useState([]);
 
     const addChannel = () => {
@@ -31,7 +33,7 @@ const Sidebar = () => {
         <div className="sidebar">
             <div className="sidebar__header">
                 <Typography>
-                    Jerzy Rojek
+                    {user?.displayName}
                 </Typography>
             </div>
             <hr/>
