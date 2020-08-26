@@ -5,7 +5,7 @@ import {Typography} from "@material-ui/core";
 const Welcome = () => {
     return (
         <div style={{flex:"1",width:"100%",display:"flex",justifyContent:"center", alignItems:"center"}}>
-            <div style={{display:"flex", alignItems:"center"}}>
+            <div style={{display:"flex", alignItems:"center", color:"#1a237e"}}>
                 <Typography variant="h2">
                     Welcome! Please choose or create a channel
                 </Typography>
