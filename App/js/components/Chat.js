@@ -36,7 +36,7 @@ const Chat = () => {
             </div>
             <div className="chat__messages">
                 {messages && messages.map(({message, timestamp, user},index) => {
-                    return <Message key={index} message={message} timestamp={timestamp.seconds} user={user}/>
+                    return <Message key={index} message={message} timestamp={timestamp} user={user}/>
                 })}
             </div>
         </div>
