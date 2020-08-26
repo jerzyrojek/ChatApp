@@ -15,6 +15,7 @@ module.exports = {
     devServer: {
         contentBase: path.join(__dirname, `${entryPath}`),
         publicPath: "/build/",
+        historyApiFallback: true,
         compress: true,
         port: 3001
     },

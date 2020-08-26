@@ -1,0 +1,13 @@
+.chat {
+  flex: 1;
+  overflow-y:scroll;
+  padding-bottom: 10rem;
+  height: 100%;
+  &__header {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgrey;
+    padding:1rem;
+  }
+}
