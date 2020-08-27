@@ -5,7 +5,7 @@ const Message = ({message, timestamp, user}) => {
         <div className="message">
             <div className="message__info">
                 <h3>
-                    {user} {new Date(timestamp?.toDate()).toDateString()}
+                    {user} {new Date(timestamp?.toDate()).toLocaleTimeString()}
                 </h3>
                 <p>{message}</p>
             </div>

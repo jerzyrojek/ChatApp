@@ -3,6 +3,7 @@ import {useParams} from "react-router-dom";
 import CloseIcon from '@material-ui/icons/Close';
 import {database} from "../../firebase";
 import Message from "./Message";
+import MessageInput from "./MessageInput";
 
 const Chat = () => {
     const {channelId} = useParams();
@@ -25,9 +26,6 @@ const Chat = () => {
 
     }, [channelId]);
 
-    console.log(channelInformation);
-    console.log(messages);
-
     return (
         <div className="chat">
             <div className="chat__header">
@@ -35,10 +33,11 @@ const Chat = () => {
                 <CloseIcon style={{cursor: "pointer"}}/>
             </div>
             <div className="chat__messages">
-                {messages && messages.map(({message, timestamp, user},index) => {
+                {messages && messages.map(({message, timestamp, user}, index) => {
                     return <Message key={index} message={message} timestamp={timestamp} user={user}/>
                 })}
             </div>
+            <MessageInput name={channelInformation?.name} channelId={channelId}/>
         </div>
     )
 }
