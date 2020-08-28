@@ -4,11 +4,18 @@ import CloseIcon from '@material-ui/icons/Close';
 import {database} from "../../firebase";
 import Message from "./Message";
 import MessageInput from "./MessageInput";
+import {IconButton} from "@material-ui/core";
+import {useHistory} from "react-router-dom";
 
 const Chat = () => {
     const {channelId} = useParams();
     const [channelInformation, setChannelInformation] = useState(null);
     const [messages, setMessages] = useState(null);
+    const history = useHistory();
+
+    const handleClickReturn = () => {
+        history.push("/");
+    }
 
     useEffect(() => {
         if (channelId) {
@@ -30,7 +37,7 @@ const Chat = () => {
         <div className="chat">
             <div className="chat__header">
                 <h2>{channelInformation?.name}</h2>
-                <CloseIcon style={{cursor: "pointer"}}/>
+                <IconButton onClick={handleClickReturn}><CloseIcon/></IconButton>
             </div>
             <div className="chat__messages">
                 {messages && messages.map(({message, timestamp, user}, index) => {
