@@ -1,22 +1,41 @@
 .sidebar {
-  color:white;
+  color: white;
   max-width: 15rem;
   background-color: #1A1D21;
+  overflow-y: scroll;
   height: 100%;
-  flex:0.3;
+  flex: 0.3;
+
   &__header {
-    padding:1rem;
+    padding: 1rem;
   }
 
-  &__options {
-    margin-left:1rem;
-    margin-top:1rem;
+  &__channel-title {
+    h5 {
+      padding: 1rem;
+    }
   }
-  &__item {
-    padding:1rem 0;
+
+  &__channel-add {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+
     &:hover {
-      opacity:0.9;
-      cursor:pointer;
+      cursor: pointer;
+      opacity: 0.9;
+      background: lighten(#1A1D21, 20%);
+    }
+  }
+
+  &__item {
+    padding: 1rem;
+
+    &:hover {
+      opacity: 0.9;
+      background: lighten(#1A1D21, 20%);
+      cursor: pointer;
     }
   }
 }
+
