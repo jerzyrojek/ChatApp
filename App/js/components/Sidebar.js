@@ -38,8 +38,15 @@ const Sidebar = () => {
             </div>
             <hr/>
             <div className="sidebar__options">
-                <Typography>Channels</Typography>
-                <AddIcon onClick={addChannel} style={{cursor: "pointer"}}/>
+                <div className="sidebar__channel-title">
+                    <Typography variant="h5">Channels</Typography>
+                    <div className="sidebar__channel-add" onClick={addChannel}>
+                        <p>Add Channel</p>
+                        <AddIcon  style={{color:"white"}}/>
+
+                    </div>
+                </div>
+                <hr/>
                 {channels.map(channel => (
                     <SidebarItem title={channel.name} id={channel.id} key={channel.id}/>
                 ))}
