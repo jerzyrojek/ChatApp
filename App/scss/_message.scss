@@ -1,0 +1,18 @@
+.message {
+  width: 100%;
+  padding: 1rem;
+
+  &__info {
+    h3 {
+      font-size:1.25rem;
+    }
+    p{
+      padding:0.5rem 0;
+    }
+    &-date {
+      color:grey;
+      font-size:0.9rem;
+      font-weight: bold;
+    }
+  }
+}
