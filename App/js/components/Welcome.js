@@ -4,17 +4,15 @@ import {Typography} from "@material-ui/core";
 
 const Welcome = () => {
     return (
-        <div style={{flex:"1",width:"100%",display:"flex",justifyContent:"center", alignItems:"center"}}>
-            <div style={{display:"flex", alignItems:"center", color:"#1a237e"}}>
-                <Typography variant="h2">
-                    Welcome! Please choose or create a channel
+        <div className="welcome">
+            <div className="welcome__title">
+                <Typography variant="h3">
+                    Welcome! Please choose or create a channel<EmojiEmotionsIcon style={{fontSize: "3.5rem"}}/>
                 </Typography>
-                <EmojiEmotionsIcon style={{fontSize:"3.5rem"}}/>
             </div>
         </div>
     )
 }
-
 
 
 export default Welcome;

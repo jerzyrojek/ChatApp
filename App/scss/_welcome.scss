@@ -1,0 +1,19 @@
+.welcome {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__title {
+    color: #1a237e;
+    padding:1rem;
+    h3 {
+      text-align: center;
+      position:relative;
+    }
+    .MuiSvgIcon-root {
+      position:absolute;
+    }
+  }
+}
