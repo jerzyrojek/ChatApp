@@ -8,12 +8,12 @@ import {actionTypes} from "../reducer";
 const LoginPage = () => {
     const [state, dispatch] = useStateValue();
 
-    const loginIn = () => {
+    const logIn = () => {
         authorization.signInWithPopup(provider).then((response) => {
             dispatch({
                 type:actionTypes.SET_USER,
                 user: response.user,
-            });
+            })
         }).catch((error) => {
             alert(error.message);
         });
@@ -24,7 +24,7 @@ const LoginPage = () => {
             <div className="login__container">
                 <img alt= "logo" src= "../../assets/logo.png"/>
                 <Typography variant="h3">Sign in to the ChatApp</Typography>
-                <Button onClick={loginIn}>Google sign in</Button>
+                <Button onClick={logIn}>Google sign in</Button>
             </div>
         </div>
     );

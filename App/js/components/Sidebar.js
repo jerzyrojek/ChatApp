@@ -27,7 +27,8 @@ const Sidebar = () => {
                 name: doc.data().name
             })))
         ))
-    }, [])
+
+    }, []);
 
     return (
         <div className="sidebar">
@@ -39,12 +40,12 @@ const Sidebar = () => {
             <hr/>
             <div className="sidebar__options">
                 <div className="sidebar__channel-title">
-                    <Typography variant="h5">Channels</Typography>
                     <div className="sidebar__channel-add" onClick={addChannel}>
                         <p>Add Channel</p>
                         <AddIcon  style={{color:"white"}}/>
 
                     </div>
+                    <Typography variant="h5">Channels</Typography>
                 </div>
                 <hr/>
                 {channels.map(channel => (
