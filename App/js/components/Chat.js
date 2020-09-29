@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import {useParams} from "react-router-dom";
 import CloseIcon from '@material-ui/icons/Close';
 import {database} from "../../firebase";
@@ -12,6 +12,7 @@ const Chat = () => {
     const [channelInformation, setChannelInformation] = useState(null);
     const [messages, setMessages] = useState(null);
     const history = useHistory();
+    const messageRef = useRef();
 
     const handleClickReturn = () => {
         history.push("/");
@@ -33,6 +34,10 @@ const Chat = () => {
 
     }, [channelId]);
 
+    useEffect(() => {
+        messageRef.current.scrollIntoView({behavior:"smooth"});
+    },[messages])
+
     return (
         <div className="chat">
             <div className="chat__header">
@@ -43,6 +48,7 @@ const Chat = () => {
                 {messages && messages.map(({message, timestamp, user}, index) => {
                     return <Message key={index} message={message} timestamp={timestamp} user={user}/>
                 })}
+                <div style={{opacity:"1"}} ref={messageRef}/>
             </div>
             <MessageInput name={channelInformation?.name} channelId={channelId}/>
         </div>
