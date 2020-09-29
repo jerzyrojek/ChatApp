@@ -23,7 +23,7 @@ const Header = () => {
     const classes = useStyles();
     return (
         <div>
-            <AppBar className={classes.root} position="static">
+            <AppBar className={classes.root} position="fixed">
                 <Toolbar>
                     <ChatIcon style={{marginRight: "1rem"}}/>
                     <Typography variant="h6" className={classes.title}>
@@ -34,6 +34,7 @@ const Header = () => {
                     </IconButton>
                 </Toolbar>
             </AppBar>
+            <Toolbar/>
         </div>
     )
 }
