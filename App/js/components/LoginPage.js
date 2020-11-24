@@ -4,6 +4,7 @@ import Button from "@material-ui/core/Button";
 import {authorization, provider} from "../../firebase";
 import {useStateValue} from "../StateProvider";
 import {actionTypes} from "../reducer";
+import logo from "../../assets/logo.png";
 
 const LoginPage = () => {
     const [state, dispatch] = useStateValue();
@@ -22,7 +23,7 @@ const LoginPage = () => {
     return (
         <div className="login">
             <div className="login__container">
-                <img alt= "logo" src= "../../assets/logo.png"/>
+                <img alt= "logo" src={logo}/>
                 <Typography variant="h3">Sign in to the ChatApp</Typography>
                 <Button onClick={logIn}>Google sign in</Button>
             </div>

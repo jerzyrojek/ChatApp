@@ -13,7 +13,7 @@ const MessageInput = ({name, channelId}) => {
         if (channelId) {
             database.collection("channels").doc(channelId).collection("messages").add({
                 message: userInput,
-                timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+                timestamp: new Date(),
                 user: user.displayName,
             })
         }

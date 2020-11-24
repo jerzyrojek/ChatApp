@@ -13,7 +13,7 @@ const App = () => {
 
     return (
         <div className="app">
-            <BrowserRouter>
+            <BrowserRouter basename="/ChatApp">
                 {!user ? (
                     <LoginPage/>
                 ) : (
@@ -22,9 +22,7 @@ const App = () => {
                         <div className="app__body">
                             <Sidebar/>
                             <Switch>
-                                <Route exact path="/">
-                                    <Welcome/>
-                                </Route>
+                                <Route exact path="/" component={Welcome}/>
                                 <Route path="/:channelId">
                                     <Chat/>
                                 </Route>
