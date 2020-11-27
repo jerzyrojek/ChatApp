@@ -2,6 +2,8 @@
 
 A simple room based chat application where every user can create a channel and send messages.
 
+Project available at https://jerzyrojek.github.io/ChatApp/
+
 ## Description
 
 This application was for me to experiment with React router, context and hooks such as useParams or useRef. 
